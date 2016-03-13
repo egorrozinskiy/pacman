@@ -237,6 +237,6 @@ if __name__ == '__main__':
         pygame.display.update()
 
     if win == True:
-        print('Good game!')
+        print('You win!')
     else:
-        print('Ploho')
+        print('You lose')
