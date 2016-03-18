@@ -20,6 +20,7 @@ def draw_background(scr, img=None):
         scr.blit(bg, (0, 0))
 
 
+
 class Map:
         def __init__(self, h):
             self.map = [None for i in range(h)]
@@ -31,6 +32,7 @@ class Map:
 
         def get(self, x, y):
                 return self.map[int(x)][int(y)]
+
 
 class GameObject(pygame.sprite.Sprite):
     def __init__(self, img, x, y, tile_size, map_size):
@@ -62,6 +64,7 @@ class Wall(GameObject):
         GameObject.__init__(self, './resources/wall.png', x, y, tile_size, map_size)
         self.direction = 0
         self.velocity = 0
+
 
 class Ghost(GameObject):
     def __init__(self, x, y, tile_size, map_size):
